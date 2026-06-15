@@ -7,3 +7,16 @@ nav{
     padding:20px 50px;
     background:rgba(98, 207, 235, 0.25);  
 }
+
+header{
+    text-align: center;
+}
+
+button{
+    background-color: white;
+    color: #08304f;
+
+    border: none;
+
+    padding: 10px 20px;
+}
