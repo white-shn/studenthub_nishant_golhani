@@ -6,6 +6,9 @@ body{
 nav{
     padding:20px 50px;
     background:rgba(98, 207, 235, 0.25);  
+    
+    display: flex;
+    justify-content: space-between;
 }
 
 header{
