@@ -13,6 +13,11 @@ nav{
     justify-content: space-between;
 }
 
+.navlinks a{
+    text-decoration: none;
+    color: rgb(23, 27, 54);
+}
+
 .navlinks{
     display: flex;
     gap: 20px;
@@ -20,25 +25,32 @@ nav{
 
 header{
     text-align: center;
+    padding: 50px;
 }
 
 button{
     background-color: white;
-    color: #08304f;
+    color: rgb(38, 39, 113);
 
     border: none;
 
     padding: 10px 20px;
+    border-radius: 8px;
 }
 
 main{
     padding: 40px;
 }
 
+main h2{
+    text-align: center;
+}
+
 .features{
     background-color: rgb(202, 230, 241);
 
     padding: 15px;
-
+    border-radius: 12px;
     margin: 15px 0;
 }
+
