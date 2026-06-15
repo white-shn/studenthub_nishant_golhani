@@ -11,6 +11,11 @@ nav{
     justify-content: space-between;
 }
 
+.navlinks{
+    display: flex;
+    gap: 20px;
+}
+
 header{
     text-align: center;
 }
@@ -23,3 +28,5 @@ button{
 
     padding: 10px 20px;
 }
+
+
