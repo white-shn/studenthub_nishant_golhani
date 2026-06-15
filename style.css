@@ -18,6 +18,10 @@ nav{
     color: rgb(23, 27, 54);
 }
 
+.navlinks a:hover{
+    color: rgb(12, 53, 151);
+}
+
 .navlinks{
     display: flex;
     gap: 20px;
@@ -36,6 +40,10 @@ button{
 
     padding: 10px 20px;
     border-radius: 8px;
+}
+
+button:hover{
+    background-color: rgb(220, 240, 250);
 }
 
 main{
