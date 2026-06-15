@@ -51,6 +51,21 @@ main h2{
 
     padding: 15px;
     border-radius: 12px;
-    margin: 15px 0;
+    margin: 20px auto;
+     width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.featurecontainer{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 15px;
 }
 
