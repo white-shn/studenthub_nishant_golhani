@@ -1,6 +1,8 @@
 body{
     background-color: rgb(154, 218, 248);
     color: rgb(23, 27, 54);
+    margin: 0;
+
 }
 
 nav{
@@ -29,4 +31,14 @@ button{
     padding: 10px 20px;
 }
 
+main{
+    padding: 40px;
+}
 
+.features{
+    background-color: rgb(202, 230, 241);
+
+    padding: 15px;
+
+    margin: 15px 0;
+}
