@@ -2,3 +2,8 @@ body{
     background-color: rgb(154, 218, 248);
     color: rgb(23, 27, 54);
 }
+
+nav{
+    padding:20px 50px;
+    background:rgba(98, 207, 235, 0.25);  
+}
