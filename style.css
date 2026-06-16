@@ -65,10 +65,9 @@ main h2{
     padding: 15px;
     border-radius: 12px;
     margin: 20px auto;
-     width: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    width: 250px;
+    text-align: center;
+
     border: 1px solid rgb(78, 91, 99);
 
 }
