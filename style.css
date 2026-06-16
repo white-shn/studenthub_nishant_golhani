@@ -13,14 +13,6 @@ nav{
 }
 
 
-
-.logo {
-    display: flex;
-    gap: 20px;
-}
-
-
-
 .navlinks a{
     text-decoration: none;
     color: rgb(23, 27, 54);
