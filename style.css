@@ -477,11 +477,11 @@ body {
   list-style: none;
 }
 #about {
-  padding: 80px 24px;
+  padding: 30px;
   background: var(--surface);
 }
 .about-inner {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   text-align: center;
 }
@@ -532,6 +532,6 @@ body {
 }
 @media (max-width: 640px) {
   .nav-links {
-    display: none;
+    display: column;
   }
 }
