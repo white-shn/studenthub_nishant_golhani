@@ -100,3 +100,73 @@ document.getElementById('task-input').addEventListener('keydown', function(e) {
 });
 
 displayTasks();
+
+
+
+
+
+                            // habit tracker
+
+const habits = ['Read', 'Exercise', 'Drink Water'];
+
+let habitData = JSON.parse(localStorage.getItem('sh_habits')) || {
+    done: []
+};
+
+function saveHabits() {
+    localStorage.setItem('sh_habits', JSON.stringify(habitData));
+}
+
+function createHabit(habit) {
+    const li = document.createElement('li');
+
+    const completed = habitData.done.includes(habit);
+
+    li.className = 'task-item' + (completed ? ' done' : '');
+
+    li.innerHTML = `
+        <input type="checkbox" class="task-checkbox" ${completed ? 'checked' : ''} data-habit="${habit}" />
+        <span class="task-label">${habit}</span>
+    `;
+
+    return li;
+}
+
+function displayHabits() {
+    const list = document.getElementById('habit-list');
+
+    list.innerHTML = '';
+
+    habits.forEach(habit => {
+        list.appendChild(createHabit(habit));
+    });
+}
+
+document.getElementById('habit-list').addEventListener('click', function(e) {
+
+    if (!e.target.classList.contains('task-checkbox')) return;
+
+    const habit = e.target.dataset.habit;
+
+    if (e.target.checked) {
+        if (!habitData.done.includes(habit)) {
+            habitData.done.push(habit);
+        }
+    } else {
+        habitData.done = habitData.done.filter(h => h !== habit);
+    }
+
+    saveHabits();
+    displayHabits();
+});
+
+document.getElementById('habit-reset-btn').addEventListener('click', function() {
+
+    habitData.done = [];
+
+    saveHabits();
+    displayHabits();
+
+});
+
+displayHabits();
