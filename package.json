@@ -1,0 +1,25 @@
+{
+  "name": "studenthub_nishant_golhani",
+  "version": "1.0.0",
+  "description": "A campus productivity hub built during the ISTE Web Dev Bootcamp 2026.\r StudentHub is a personal command centre for student life — tracking assignments, \r managing schedules, and staying connected to campus events.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/white-shn/studenthub_nishant_golhani.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/white-shn/studenthub_nishant_golhani/issues"
+  },
+  "homepage": "https://github.com/white-shn/studenthub_nishant_golhani#readme",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.1",
+    "tailwindcss": "^4.3.1"
+  }
+}
