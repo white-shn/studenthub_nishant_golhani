@@ -164,22 +164,22 @@
   --surface: hsl(0, 0%, 100%);
   --surface2: hsl(103, 21%, 94%);
   --text: hsl(126, 28%, 14%);
-  --text-muted: #6b8f71;
-  --accent: #3a7d44;
+  --text-muted: hsl(130, 14%, 49%);
+  --accent: hwb(129 23% 51%);
   --accent-hover: #2d6235;
-  --border: #c8dcc9;
-  --shadow: rgba(58, 125, 68, 0.1);
+  --border: hsl(123, 22%, 82%);
+  --shadow: hsla(129, 37%, 36%, 0.1);
 }
-html.dark {
-  --bg: #0d1f0f;
-  --surface: #152918;
-  --surface2: #1a3320;
-  --text: #e8f0e9;
-  --text-muted: #5a7a60;
-  --accent: #4e9e5f;
-  --accent-hover: #3d8a4e;
-  --border: #1f3d22;
-  --shadow: rgba(0, 0, 0, 0.3);
+body.dark-mode {
+  --bg: oklab(23.085% -0.03248 0.02127);
+  --surface: hsl(129, 32%, 12%);
+  --surface2: hsl(134, 32%, 15%);
+  --text: hsl(127, 21%, 93%);
+  --text-muted: hsl(131, 15%, 42%);
+  --accent: hsl(133, 34%, 46%);
+  --accent-hover: hsl(133, 39%, 39%);
+  --border: hsl(126, 33%, 18%);
+  --shadow: hsla(0, 0%, 0%, 0.3);
 }
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
@@ -211,12 +211,6 @@ body {
 .nav-logo {
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-.nav-logo span {
   color: var(--accent);
 }
 .nav-links {
@@ -243,7 +237,6 @@ body {
   width: 38px;
   height: 38px;
   cursor: pointer;
-  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -251,6 +244,54 @@ body {
 }
 .theme-btn:hover {
   background: var(--accent);
+  color: white;
+}
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  background: var(--bg);
+}
+.hero-inner {
+  text-align: center;
+  max-width: 600px;
+  padding: 0 24px;
+}
+.hero-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0 0 16px 0;
+}
+.hero-heading {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--text);
+  margin: 0 0 16px 0;
+}
+.hero-sub {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin: 0 0 32px 0;
+}
+.hero-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background 0.2s ease;
+}
+.hero-btn:hover {
+  background: var(--accent-hover);
 }
 @media (max-width: 640px) {
   .nav-links {
