@@ -86,6 +86,55 @@
         </div>
     </main>
 
+                
+
+ <section id="dashboard">
+    <div class="dashboard-inner">
+
+        <div class="dashboard-header">
+            <h2 class="dashboard-heading">Dashboard</h2>
+            <p class="dashboard-sub">Your data is saved — even after a refresh</p>
+        </div>
+
+        <div class="dashboard-grid">
+
+            <!-- task manage -->
+            <div class="dashboard-card" id="task-manager">
+                <div class="card-title">
+                    <iconify-icon icon="lucide:check-square" width="20" height="20"></iconify-icon>
+                    <h3>Task Manager</h3>
+                    <span id="task-count" class="count-badge">0 tasks</span>
+                </div>
+
+                <div class="task-input-row">
+                    <input type="text" id="task-input" placeholder="Add a new task" class="text-input" />
+                    <button id="add-task-btn" class="action-btn">Add</button>
+                </div>
+
+                <ul id="task-list"></ul>
+                <p id="task-empty" class="empty-msg">No tasks yet. </p>
+            </div>
+
+            <!-- habit -->
+            <div class="dashboard-card" id="habit-tracker">
+                <div class="card-title">
+                    <iconify-icon icon="lucide:flame" width="20" height="20"></iconify-icon>
+                    <h3>Habit Tracker</h3>
+                    <span id="habit-count" class="count-badge">0 / 0</span>
+                </div>
+
+                <div class="habit-progress-wrap">
+                    <div class="habit-progress-bar">
+                        <div class="habit-progress-fill" id="habit-progress-fill"></div>
+                    </div>
+                </div>
+
+                <ul id="habit-list"></ul>
+            </div>
+
+        </div>
+    </div>
+</section>
     
     <footer id="footer">
         <div class="footer-inner">
