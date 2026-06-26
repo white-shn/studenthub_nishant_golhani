@@ -1,9 +1,12 @@
 const themeToggle = document.getElementById('theme-toggle');
 const themeIcon = document.getElementById('theme-icon');
 
+document.body.classList.add('dark-mode');
+themeIcon.setAttribute('icon', 'lucide:sun');
+
 themeToggle.addEventListener('click', () => {
-    // toggle dark-mode class 
-    document.body.classList.toggle('dark-mode');
+                                                     
+    document.body.classList.toggle('dark-mode');     // toggle dark-mode class 
 
     if (document.body.classList.contains('dark-mode')) {
         themeIcon.setAttribute('icon', 'lucide:sun');
