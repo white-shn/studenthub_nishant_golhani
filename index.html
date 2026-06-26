@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Hub</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js"></script>
@@ -30,42 +32,62 @@
     
     
     <header id="home" class="hero">
-    <div class="hero-inner">
-        <h1 class="hero-heading">Simplify your Student Life</h1>
-        <p class="hero-sub">Plan your tasks, build habits, and stay ahead of every deadline.</p>
-        <a href="#dashboard" class="hero-btn">Get Started</a>
-    </div>
-</header>
-
-    <main>
-        <h2>Features</h2>
-        
-        <div class="featurecontainer">
-            
-            <div class="features">
-                <h3> Schedule Planner</h3>
-                <p>Track classes, study sessions and daily tasks</p>
-            </div>
-            
-            <div class="features">
-                <h3> Attendance Tracker</h3>
-                <p>Monitor your attendance </p>
-            </div>
-
-            <div class="features">
-                <h3> Assignment Tracker</h3>
-                <p>Never miss deadlines</p>
-            </div>
-        
-            <div class="features">
-                <h3> Campus Events</h3>
-                <p>Stay updated with your campus</p>
-            </div>
-
+        <div class="hero-inner">
+            <h1 class="hero-heading">Simplify your Student Life</h1>
+            <p class="hero-sub">Plan your tasks, build habits, and stay ahead of every deadline.</p>
+            <a href="#dashboard" class="hero-btn">Get Started</a>
         </div>
-         
-        
+    </header>
+
+    
+    <main id="features">
+        <div class="features-inner">
+
+            <h2 class="features-heading">Everything you need</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <iconify-icon icon="mdi:calendar-outline" width="28" height="28"></iconify-icon>
+                    </div>
+                    
+                    <h3>Schedule Planner</h3>
+                    <p>Plan your weekly timetable and never miss a class</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <iconify-icon icon="mdi:chart-bar" width="28" height="28"></iconify-icon>
+                    </div>
+                    <h3>Attendance Tracker</h3>
+                    <p>Track subject-wise attendance and stay above cutoff</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <iconify-icon icon="mdi:clipboard-text-outline" width="28" height="28"></iconify-icon>
+                    </div>
+                    
+                    <h3>Assignment Tracker</h3>
+                    <p>Never miss a deadline again</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <iconify-icon icon="mdi:bell-outline" width="28" height="28"></iconify-icon>
+                    </div>
+                
+                    <h3>Campus Events</h3>
+                
+                    <p>Stay connected to campus life</p>
+                
+                </div>
+            </div>
+        </div>
     </main>
+
+
+
     
     <footer>
         <p>Less stress More progress.</p>

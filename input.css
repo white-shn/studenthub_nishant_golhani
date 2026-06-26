@@ -2,7 +2,7 @@
 
 /* light mode  */
 :root {
-    --bg: hsl(86, 30%, 95%);
+    --bg: hsl(86, 30%, 95%);  
     --surface: hsl(0, 0%, 100%);
     --surface2: hsl(103, 21%, 94%);
     --text: hsl(126, 28%, 14%);
@@ -11,11 +11,12 @@
     --accent-hover: #2d6235;
     --border: hsl(123, 22%, 82%);
     --shadow: hsla(129, 37%, 36%, 0.1);
+    
 }
 
 /* dark mode */
 body.dark-mode {
-    --bg: oklab(23.085% -0.03248 0.02127);
+    --bg: hsl(127, 36%, 10%);
     --surface: hsl(129, 32%, 12%);
     --surface2: hsl(134, 32%, 15%);
     --text: hsl(127, 21%, 93%);
@@ -44,8 +45,7 @@ body {
     right: 0;
     z-index: 50;
     background: var(--surface);
-    border-bottom: 1px solid var(--border);
-    backdrop-filter: blur(12px);
+    border-bottom: 2px solid var(--border);
 }
 
 .nav-inner {
@@ -103,11 +103,11 @@ body {
 
                                        /* hero */
 .hero {
-    min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding-top: 80px;  
+    align-items: center;
+
+    padding: 140px 24px 80px;
     background: var(--bg);
 }
 
@@ -126,13 +126,7 @@ body {
     margin: 0 0 16px 0;
 }
 
-.hero-heading {
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 700;
-    line-height: 1.2;
-    color: var(--text);
-    margin: 0 0 16px 0;
-}
+
 
 .hero-sub {
     font-size: 1rem;
@@ -155,6 +149,80 @@ body {
 
 .hero-btn:hover {
     background: var(--accent-hover);
+}
+
+/* features */
+#features {
+    padding: 80px 24px;
+    background: var(--surface);
+}
+
+.features-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    padding-bottom: 50px;
+    margin: 0 0 8px 0;
+}
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.feature-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px); /*card will move 4px up when hovered */
+    box-shadow: 0 8px 28px var(--shadow);
+}
+
+.feature-icon {
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 8px 0;
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 640px) {
