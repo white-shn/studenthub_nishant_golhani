@@ -451,7 +451,7 @@ body {
 
 @media (max-width: 640px) {
     .nav-links {
-        display: none;
+        display: columns;
     }
 }
 
