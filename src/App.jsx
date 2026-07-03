@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -7,18 +8,31 @@ import Dashboard from './pages/Dashboard'
 import About from './pages/About'
 
 function App() {
+  const [darkMode, setDarkMode]= useState(true) // start in dark mode
+
+  useEffect(() => {
+    // whenever darkMode changes we'll add/remove the class on body
+    document.body.classList.toggle('dark-mode', darkMode)
+  }, [darkMode]) // runs every time darkMode changes
+
+  function toggleDark() {
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <BrowserRouter>
-      <Navbar />
-      <main style={{ paddingTop: "80px" }}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/about" element={<About />} />
-        </Routes>
-      </main>
-      <Footer />
-    </BrowserRouter>
+    <div>
+      <BrowserRouter>
+        <Navbar darkMode={darkMode} toggleDark={toggleDark} />
+        <main style={{ paddingTop: '80px' }}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/about" element={<About />} />
+          </Routes>
+        </main>
+        <Footer />
+      </BrowserRouter>
+    </div>
   )
 }
 

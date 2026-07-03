@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom'
-function Navbar() {
+
+// darkMode and toggleDark come from App.jsx as props
+function Navbar({ darkMode, toggleDark }) {
   return (
     <nav id="navbar">
       <div className="nav-inner">
@@ -9,6 +11,13 @@ function Navbar() {
           <Link to="/dashboard">Dashboard</Link>
           <Link to="/about">About</Link>
         </div>
+        <button className="theme-btn" onClick={toggleDark}>
+          <iconify-icon
+            icon={darkMode ? 'lucide:sun' : 'lucide:moon'} 
+            width="18" 
+            height="18">
+          </iconify-icon>
+        </button>
       </div>
     </nav>
   )
