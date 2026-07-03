@@ -1,0 +1,456 @@
+/* light mode  */
+:root {
+    --bg: hsl(86, 30%, 95%);  
+    --surface: hsl(0, 0%, 100%);
+    --surface2: hsl(103, 21%, 94%);
+    --text: hsl(126, 28%, 14%);
+    --text-muted: hsl(130, 14%, 49%);
+    --accent: hwb(129 23% 51%);
+    --accent-hover: #2d6235;
+    --border: hsl(123, 22%, 82%);
+    --shadow: hsla(129, 37%, 36%, 0.1);
+    
+}
+
+/* dark mode */
+body.dark-mode {
+    --bg: hsl(127, 36%, 10%);
+    --surface: hsl(129, 32%, 12%);
+    --surface2: hsl(134, 32%, 15%);
+    --text: hsl(127, 21%, 93%);
+    --text-muted: hsl(131, 15%, 42%);
+    --accent: hsl(133, 34%, 46%);
+    --accent-hover: hsl(133, 39%, 39%);
+    --border: hsl(126, 33%, 18%);
+    --shadow: hsla(0, 0%, 0%, 0.3);
+}
+
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+}
+                                            /*nav section*/
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: var(--surface);
+    border-bottom: 2px solid var(--border);
+}
+
+.nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+    background: var(--surface2);
+    color: var(--accent);
+}
+
+.theme-btn {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+    background: var(--accent);
+    color: white;
+}
+
+                                       /* hero */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 140px 24px 80px;
+    background: var(--bg);
+}
+
+.hero-inner {
+    text-align: center;
+    max-width: 600px;
+    padding: 0 24px;
+}
+
+
+.hero-heading {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--text);
+    margin: 0 0 16px 0;
+}
+
+
+.hero-sub {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0 0 32px 0;
+}
+
+.hero-btn {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background 0.2s ease;
+}
+
+.hero-btn:hover {
+    background: var(--accent-hover);
+}
+
+/* features */
+#features {
+    padding: 80px 24px;
+    background: var(--surface);
+}
+
+.features-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.features-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    padding-bottom: 50px;
+    margin: 0 0 8px 0;
+}
+
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.feature-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-4px); /*card will move 4px up when hovered */
+    box-shadow: 0 8px 28px var(--shadow);
+}
+
+.feature-icon {
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0 0 8px 0;
+}
+
+.feature-card p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* dashboard section */
+#dashboard {
+    padding: 80px 24px;
+    background: var(--bg);
+}
+
+.dashboard-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-heading {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0 0 8px 0;
+}
+
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.dashboard-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+    color: var(--accent);
+}
+
+.card-title h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 0;
+    flex: 1;
+}
+
+.count-badge {
+    font-size: 0.75rem;
+    font-weight: 500;
+    background: var(--surface2);
+    color: var(--accent);
+    padding: 2px 10px;
+    border-radius: 999px;
+}
+
+.text-input {
+    flex: 1;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background: var(--bg);
+    color: var(--text);
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.text-input:focus {
+    border-color: var(--accent);
+}
+
+.action-btn {
+    padding: 10px 18px;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.action-btn:hover {
+    background: var(--accent-hover);
+}
+
+.task-input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.empty-msg {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 20px;
+}
+
+
+                     /* for task items */
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 10px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    margin-bottom: 8px;
+    list-style: none;
+}
+
+.task-item.done .task-label {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.task-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--accent);
+    flex-shrink: 0;
+}
+
+.task-label {
+    flex: 1;
+    font-size: 0.8rem;
+    color: var(--text);
+    overflow-wrap: break-word;
+}
+
+.task-delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+}
+
+.task-delete-btn:hover {
+    color: #e05555;
+    background: rgba(220, 80, 80, 0.1);
+}
+
+
+#task-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+
+                                        /* about section */
+
+#about{
+    padding: 30px ;
+    background: var(--surface);
+    
+}
+
+.about-inner{
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-heading{
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 24px;
+}
+
+.about-text{
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+
+                                      /*footer*/
+
+#footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    padding: 15px ;
+    text-align: center;
+}
+
+.footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer-tagline {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin: 0 0 4px 0;
+}
+
+.footer-copy {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    margin: 0;
+    
+}
+
+
+@media (max-width: 768px) {
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .nav-links {
+        display: none;
+    }
+}
+

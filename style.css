@@ -532,6 +532,6 @@ body {
 }
 @media (max-width: 640px) {
   .nav-links {
-    display: column;
+    display: none;
   }
 }

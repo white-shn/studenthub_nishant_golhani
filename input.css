@@ -452,11 +452,7 @@ body {
 
 @media (max-width: 640px) {
     .nav-links {
-<<<<<<< HEAD
-        display: columns;
-=======
-        display: column;
->>>>>>> 69e8f9d (minor updates)
+        display: none;
     }
 }
 
