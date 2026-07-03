@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { useState, useEffect } from 'react'
+import Announcements from './pages/Announcements'
 
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
@@ -25,6 +26,7 @@ function App() {
         <Navbar darkMode={darkMode} toggleDark={toggleDark} />
         <main style={{ paddingTop: '80px' }}>
           <Routes>
+            <Route path="/announcements" element={<Announcements />} />
             <Route path="/" element={<Home />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/about" element={<About />} />

@@ -1,32 +1,31 @@
 /* light mode  */
 :root {
-    --bg: hsl(86, 30%, 95%);  
+    --bg: hsl(40, 43%, 96%);  
     --surface: hsl(0, 0%, 100%);
-    --surface2: hsl(103, 21%, 94%);
-    --text: hsl(126, 28%, 14%);
-    --text-muted: hsl(130, 14%, 49%);
-    --accent: hwb(129 23% 51%);
-    --accent-hover: #2d6235;
-    --border: hsl(123, 22%, 82%);
-    --shadow: hsla(129, 37%, 36%, 0.1);
-    
+    --surface2: hsl(44, 35%, 87%); 
+    --text: hsl(24, 19%, 15%);  
+    --text-muted: hsl(25, 11%, 41%); 
+    --accent: hsl(123, 44%, 39%);  
+    --accent-hover: hwb(124 11% 62%); 
+    --border: hsl(35, 24%, 82%);
+    --shadow: hsla(0, 0%, 0%, 0.08);
 }
 
-/* dark mode */
-body.dark-mode {
-    --bg: hsl(127, 36%, 10%);
-    --surface: hsl(129, 32%, 12%);
-    --surface2: hsl(134, 32%, 15%);
-    --text: hsl(127, 21%, 93%);
-    --text-muted: hsl(131, 15%, 42%);
-    --accent: hsl(133, 34%, 46%);
-    --accent-hover: hsl(133, 39%, 39%);
-    --border: hsl(126, 33%, 18%);
-    --shadow: hsla(0, 0%, 0%, 0.3);
+ body.dark-mode {
+    --bg: hsl(137, 13%, 11%);  
+    --surface: hsl(127, 13%, 14%); 
+    --surface2: hsl(131, 11%, 19%);
+    --text: hsl(43, 22%, 87%); 
+    --text-muted: hsl(39, 12%, 53%);
+    --accent: hsl(123, 39%, 55%); 
+    --accent-hover: hsl(122, 39%, 47%);
+    --border: hsl(130, 12%, 19%);
+    --shadow: hsla(0, 1%, 14%, 0.4);
 }
 
 * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
 }
 
 body {
@@ -35,6 +34,7 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
 }
+
                                             /*nav section*/
 #navbar {
     position: fixed;
@@ -44,6 +44,7 @@ body {
     z-index: 50;
     background: var(--surface);
     border-bottom: 2px solid var(--border);
+    box-shadow: 0 2px 10px var(--shadow);
 }
 
 .nav-inner {
@@ -73,7 +74,6 @@ body {
     font-weight: 500;
     padding: 8px 16px;
     border-radius: 20px;
-    transition: all 0.2s ease;
 }
 
 .nav-links a:hover {
@@ -95,12 +95,13 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: all 0.2s ease;
 }
 
 .theme-btn:hover {
     background: var(--accent);
-    color: white;
+}
+.theme-btn:hover iconify-icon {
+    color: hsl(0, 0%, 100%);
 }
 
                                        /* hero */
@@ -108,7 +109,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 140px 24px 80px;
     background: var(--bg);
 }
@@ -119,18 +119,16 @@ body {
     padding: 0 24px;
 }
 
-
 .hero-heading {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     line-height: 1.2;
     color: var(--text);
     margin: 0 0 16px 0;
 }
 
-
 .hero-sub {
-    font-size: 1rem;
+    font-size: 1.05rem;
     color: var(--text-muted);
     line-height: 1.6;
     margin: 0 0 32px 0;
@@ -138,18 +136,19 @@ body {
 
 .hero-btn {
     display: inline-block;
-    background: var(--accent);
+    background: linear-gradient(135deg, var(--accent), var(--accent-hover));
     color: white;
     text-decoration: none;
     padding: 12px 28px;
-    border-radius: 999px;
+    border-radius: 8px;
     font-weight: 600;
-    font-size: 0.95rem;
-    transition: background 0.2s ease;
+    font-size: 1rem;
+    box-shadow: 0 4px 6px var(--shadow);
 }
 
 .hero-btn:hover {
-    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px var(--shadow);
 }
 
 /* features */
@@ -172,7 +171,6 @@ body {
     margin: 0 0 8px 0;
 }
 
-
 .features-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -182,15 +180,16 @@ body {
 .feature-card {
     background: var(--bg);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 28px 20px;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 8px var(--shadow);
 }
 
 .feature-card:hover {
-    transform: translateY(-4px); /*card will move 4px up when hovered */
-    box-shadow: 0 8px 28px var(--shadow);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px var(--shadow);
+    border-color: var(--accent);
 }
 
 .feature-icon {
@@ -201,14 +200,14 @@ body {
 }
 
 .feature-card h3 {
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 600;
     color: var(--text);
     margin: 0 0 8px 0;
 }
 
 .feature-card p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.5;
     margin: 0;
@@ -231,12 +230,11 @@ body {
 }
 
 .dashboard-heading {
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text);
     margin: 0 0 8px 0;
 }
-
 
 .dashboard-grid {
     display: grid;
@@ -247,8 +245,9 @@ body {
 .dashboard-card {
     background: var(--surface);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: 12px;
     padding: 24px;
+    box-shadow: 0 4px 12px var(--shadow);
 }
 
 .card-title {
@@ -256,30 +255,20 @@ body {
     align-items: center;
     gap: 8px;
     margin-bottom: 20px;
-    color: var(--accent);
+    color: var(--text);
 }
 
 .card-title h3 {
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 600;
-    color: var(--text);
     margin: 0;
     flex: 1;
-}
-
-.count-badge {
-    font-size: 0.75rem;
-    font-weight: 500;
-    background: var(--surface2);
-    color: var(--accent);
-    padding: 2px 10px;
-    border-radius: 999px;
 }
 
 .text-input {
     flex: 1;
     padding: 10px 14px;
-    border-radius: 10px;
+    border-radius: 8px;
     border: 1px solid var(--border);
     background: var(--bg);
     color: var(--text);
@@ -296,11 +285,11 @@ body {
     background: var(--accent);
     color: white;
     border: none;
-    border-radius: 10px;
+    border-radius: 8px;
     font-weight: 600;
     font-size: 0.9rem;
     cursor: pointer;
-    transition: background 0.2s ease;
+    box-shadow: 0 2px 4px var(--shadow);
 }
 
 .action-btn:hover {
@@ -320,23 +309,29 @@ body {
     margin-top: 20px;
 }
 
-
                      /* for task items */
 .task-item {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 12px;
-    border-radius: 10px;
+    border-radius: 8px;
     background: var(--bg);
     border: 1px solid var(--border);
     margin-bottom: 8px;
     list-style: none;
 }
 
+.task-item:hover {
+    border-color: var(--accent);
+}
+
+.task-item.done {
+    opacity: 0.6;
+}
+
 .task-item.done .task-label {
     text-decoration: line-through;
-    opacity: 0.5;
 }
 
 .task-checkbox {
@@ -349,7 +344,7 @@ body {
 
 .task-label {
     flex: 1;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     color: var(--text);
     overflow-wrap: break-word;
 }
@@ -363,14 +358,11 @@ body {
     align-items: center;
     padding: 4px;
     border-radius: 6px;
-    transition: color 0.15s, background 0.15s;
 }
 
 .task-delete-btn:hover {
-    color: #e05555;
-    background: rgba(220, 80, 80, 0.1);
+    background: var(--surface2);
 }
-
 
 #task-list {
     padding: 0;
@@ -378,14 +370,10 @@ body {
     list-style: none;
 }
 
-
-
                                         /* about section */
-
 #about{
-    padding: 30px ;
+    padding: 80px 24px;
     background: var(--surface);
-    
 }
 
 .about-inner{
@@ -395,7 +383,7 @@ body {
 }
 
 .about-heading{
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--text);
     margin-bottom: 24px;
@@ -403,18 +391,16 @@ body {
 
 .about-text{
     color: var(--text-muted);
-    font-size: 0.95rem;
+    font-size: 1rem;
     line-height: 1.8;
     margin-bottom: 18px;
 }
 
-
                                       /*footer*/
-
 #footer {
-    background: var(--surface);
+    background: var(--surface2);
     border-top: 1px solid var(--border);
-    padding: 15px ;
+    padding: 20px ;
     text-align: center;
 }
 
@@ -425,17 +411,15 @@ body {
 
 .footer-tagline {
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     margin: 0 0 4px 0;
 }
 
 .footer-copy {
     color: var(--text-muted);
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     margin: 0;
-    
 }
-
 
 @media (max-width: 768px) {
     .features-grid {
@@ -457,4 +441,3 @@ body {
         display: none;
     }
 }
-

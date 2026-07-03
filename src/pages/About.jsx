@@ -8,6 +8,8 @@ function About() {
           It brings together tasks, habits and planning in one place, making it easier
           to manage everyday academic work.
         </p>
+        
+        <p className="about-text">Built with React + Vite</p>
       </div>
     </section>
   )
